@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+
+<head>
+    <title>What's up guys ? - American translator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="{% static 'css/index.css' %}" rel="stylesheet">
+    <link href="{% static 'css/textareas.css' %}" rel="stylesheet">
+    <link rel="icon" href="{% static 'img/favicon/favicon.ico' %}" type="image/gif">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+
+</head>
+
+<body style="background-color:#f9f7f1; ">
+    <script>
+        var vowel = ["a", "e", "i", "o", "u"];
+        var demonym = $('#us-state').find(":selected").text();
+        var first_letter = demonym.charAt(0).toLowerCase();
+        $('document').ready(function () {
+            $('#us-state').on('change', function() {
+                var demonym = $('#us-state').find(":selected").text();
+                var first_letter = demonym.charAt(0).toLowerCase();
+                console.log(first_letter);
+                if((vowel.includes(first_letter)) == true){
+                    $(".papers span span").html("an");
+                }
+                else{
+                    $(".papers span span").html("a");
+                }
+            });
+        });
+        $('document').ready(function () {
+            $("#sender").click(function (e) {
+                e.preventDefault();
+                var selected = $('#us-state option:selected').val();
+                var input = $('#first-textarea').val();
+                $.ajax({
+                    url: "{% url 'main:index' %}",
+                    type: 'POST',
+                    data: {
+                        'us-state': selected,
+                        'inputValue': input,
+                        'demonym' : demonym,
+                        csrfmiddlewaretoken: '{{ csrf_token }}'
+                    },
+                    success: function (response) {
+                        console.log(input + selected + demonym);
+                        $("#second-textarea").html(response);
+                    },
+                    error: function (error) {
+                        console.log(error);
+                    },
+                });
+            });
+
+        });
+    </script>
+    <div class="head">
+        <div class="headerobjectswrapper">
+            <div class="weatherforcastbox">{{city}}, {{country}}<span style="font-style: italic;">
+                    <br/>Weatherforcast :
+                    {{forecast}}</span><br><span>Wind: {{wind}}km/h SSE; Ther: {{temperature}}°C; Hum: {{humidity}}%</span></div>
+            <header class="text-center">What's up guys ?</header>
+        </div>
+    </div>
+    <p class="marquee">
+        {% for new in the_news %}
+        <span class="first"><a href="#"><span class="news">10:40</span>{{new}}</a></span>
+        {% endfor %}
+    </p>
+    <div class="container-fluid text-center">
+        <div class="row text-center">
+            <div class="col">
+                <button type="submit" id="sender">Translate &nbsp;&nbsp;&nbsp;
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <div class="content">
+                    <div class="collumns">
+                        <div class="collumn">
+                            <div class="head"><span class="headline hl3">She's back !</span>
+                                <p><span class="headline hl4">by Ellaria Sand</span></p>
+                            </div>
+                            We all missed her. On horseback, or riding Drogo, Daenerys has risen from the ashes stronger than it ever was.
+                            And this is certainly not good news for Westerosi. The Khaleesi is back, more determined than ever to get revenge 
+                            on the people who betrayed her. At least, that's what <a href="https://websteros.herokuapp.com/en/" target="_blank">Websteros</a>, a website on Game of Thrones universe, invites us to discover.
+                            <figure class="figure">
+                                <img class="media" src="https://thumbs.gfycat.com/DiscreteImpoliteAnkole-size_restricted.gif" alt="">
+                                <figcaption class="figcaption">Daenerys</figcaption>
+                            </figure>
+                            <div class="head"><span class="headline hl5">Act now</span>
+                                <p><span class="headline hl4">by the website creator</span></p>
+                            </div>
+                            We all missed her. On horseback, or riding Drogo, Daenerys has risen from the ashes stronger than it ever was.
+                            And this is certainly not good news for Westerosi. The Khaleesi is back, more determined than ever to get revenge 
+                            on the people who betrayed her. At least, that's what <a href="https://websteros.herokuapp.com/en/" target="_blank">Websteros</a>, a website on Game of Thrones universe, invites us to discover.
+                            <figure class="figure">
+                                <img class="media" src="https://images-na.ssl-images-amazon.com/images/I/91-KgbOsq0L._AC_SX450_.jpg" alt="">
+                                <figcaption class="figcaption">a paulownia tree</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-4">
+                <form method="POST">
+                    {% csrf_token %}
+                    <div class="wrapper-first">
+                        <div class="papers">
+                            <span>Your text</span>
+                            <hr />
+                            <textarea id="first-textarea" placeholder="type or paste your text here"
+                                style="resize:none; font-family: 'Cormorant Upright';font-size: 18pt"></textarea>
+
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <div class="row">
+
+                            <div class="col">
+                                <div class="collumn">
+                                    <div class="head"><span class="headline hl1">English Language evolved, its teaching didn't.</span>
+                                        <span class="headline hl4">by the website creator</span></p>
+                                    </div>Molière and Shakespeare are probably spinning in their graves, but who cares ?
+                                    Definitely not me.
+                                    The conservative obsession of academies weakens the influence of our languages. Without evolution of their own, they fade.
+                                    In France, for example, middle and high school English courses won't be useful to you, unless you wanna speak in medieval English.
+                                   
+                                </div>
+                            </div>
+                            <div class="col">
+
+                                <div class="collumn">
+                                    <br/>
+                                    
+                                     <figure class="figure">
+                                        <img class="media" src="https://i.imgflip.com/42fy64.jpg" alt="">
+                                        <figcaption class="figcaption">Joe Biden
+                                        </figcaption>
+                                    </figure>
+                                    Below is a small list of some useful to learn before leaving to live your American dream.
+                                    <br/><br/>
+                                    <b><del>got to</del> gotta</b>
+                                    <br/>
+                                    <b><del>want to</del> wanna</b>
+                                    <br/>
+                                    <b><del>going to</del> gonna</b>
+                                    <br/>
+                                    <b><del>lot of</del> lotta</b>
+                                    <br/>
+                                    <b><del>give me</del> gimme</b>
+                                    <br/>
+                                    <b><del>How are you doing?</del> What's up?</b>
+                                    <br/>
+                                    <b><del>yes</del> yeah</b>
+                                    <br/>
+                                    <b><del>Good lord!</del> Fuck!</b>
+                                    <br/>
+                                    <b><del>you</del> ya</b>
+                                    <br/>
+                                    <b><del>isn't</del> ain't</b>
+                                    <br/>
+                                    <b><del>aren't</del> ain't</b>
+                                    <br/><br/>
+                                    Further information : <a href="https://www.linkedin.com/in/maximepro/detail/overlay-view/urn:li:fsd_profileTreasuryMedia:(ACoAACGYVdEBh5NcKGr6u5LN3AZS1FQ9DrH3y4o,1601479454651)/" target="_blank">here</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="col-4">
+                <div class="wrapper-second">
+                    <div class="papers">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <span>I wanna speak like <span>an</span></span>
+                                </div>
+                                <select id="us-state">
+                                    <option value="Alabama" selected>Alabamian</option>
+                                    <option value="Alaska">Alaskan</option>
+                                    <option value="Arizona">Arizonan</option>
+                                    <option value="Arkansas">Arkansan</option>
+                                    <option value="California">Californian</option>
+                                    <option value="Colorado">Coloradan</option>
+                                    <option value="Connecticut">Connecticuter</option>
+                                    <option value="Delaware">Delawarean</option>
+                                    <option value="District of Columbia">Washingtonian (District Of Columbia)</option>
+                                    <option value="Florida">Floridian</option>
+                                    <option value="Georgia">Georgian</option>
+                                    <option value="Hawaii">Hawaiian</option>
+                                    <option value="Idaho">Idahoan</option>
+                                    <option value="Illinois">Illinoisan</option>
+                                    <option value="Indiana">Hoosier (Indiana)</option>
+                                    <option value="Iowa">Iowan</option>
+                                    <option value="Kansas">Kansan</option>
+                                    <option value="Kentuckian">Kentuckian</option>
+                                    <option value="Louisiana">Louisianan</option>
+                                    <option value="Maine">Mainer</option>
+                                    <option value="Maryland">Marylander</option>
+                                    <option value="Massachusetts">Massachusettsan</option>
+                                    <option value="Michigan">Michiganian</option>
+                                    <option value="Minnesota">Minnesotan</option>
+                                    <option value="Mississippi">Mississippian</option>
+                                    <option value="Missouri">Missourian</option>
+                                    <option value="Montana">Montanan</option>
+                                    <option value="Nebraska">Nebraskan</option>
+                                    <option value="Nevada">Nevadan</option>
+                                    <option value="New Hampshire">New Hampshirite</option>
+                                    <option value="New Jersey">New Jerseyan</option>
+                                    <option value="New Mexico">New Mexican</option>
+                                    <option value="New York">New Yorker</option>
+                                    <option value="North Carolina">North Carolinan</option>
+                                    <option value="North Dakota">North Dakotan</option>
+                                    <option value="Ohio">Ohioan</option>
+                                    <option value="Oklahoma">Oklahoman</option>
+                                    <option value="Oregon">Oregonian</option>
+                                    <option value="Pennsylvania">Pennsylvanian</option>
+                                    <option value="Rhode Island">Rhode Islander</option>
+                                    <option value="South Carolina">South Carolinian</option>
+                                    <option value="South Dakota">South Dakotan</option>
+                                    <option value="Tennessee">Tennesseean</option>
+                                    <option value="Texas">Texan</option>
+                                    <option value="Utah">Utahn</option>
+                                    <option value="Vermont">Vermonter</option>
+                                    <option value="Virginia">Virginian</option>
+                                    <option value="Washington">Washingtonian (Washington)</option>
+                                    <option value="West Virginia">West Virginian</option>
+                                    <option value="Wisconsin">Wisconsinite</option>
+                                    <option value="Wyoming">Wyomingite</option>
+                                </select>
+                            </div>
+                            <hr />
+                        </div>
+                        <textarea id="second-textarea" readonly
+                            style="resize:none; font-family: 'Cormorant Upright';font-size: 18pt"></textarea>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col">
+                            <div class="collumn">
+                                <div class="head"><span class="headline hl1">You can't stop progress</span></div>
+                                <p><span class="headline hl4">by myself</span></p>
+                                <a href="https://pyswigo.herokuapp.com/" target="_blank">Pyswigo </a> is a programming languages translation app.  
+                                The app will allow developers to switch from one language to another. Currently being developed, its beginnings are promising...
+                                
+                                <hr/>
+                                 <div class="head"><span class="headline hl3">The author</span>
+                                I'm Maxime. I am a web integrator and Python/Django/Flask developer. Don't hesitate to hit me up.
+                                <a href="https://www.linkedin.com/in/maximepro/" target="_blank">My Linkedin</a>
+                            </div>
+                                
+                            </div>
+                        </div>
+                        <div class="col">
+
+                            <div class="collumn">
+                                <div class="head"><span class="headline hl5">What is Justice ?</span>
+                                    
+                                </div>
+
+                                The feeling of no frustration, the perfect balance between socialism and capitalism, liberalism and protectionism, libertariasnim and statism, 
+                                traditionalism and progressism, nationalism and internationalism, interventionism and pacifism, authoritarianism and laxity.</p>
+                                <figure class="figure">
+                                    <img class="media" src="https://www.pngfactory.net/_png/_thumb/29797-kiki66-JUSTICEBALANCE.png" alt="">
+                                    <figcaption class="figcaption">The scale of justice</figcaption>
+                                </figure>
+
+                                <p>
+                                    No, this ain't utopia.
+                                    </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="content">
+                    <div class="collumns">
+                        <div class="collumn">
+                            <div class="head"><span class="headline hl1">When darkness overspreads my eyes</span>
+                                <p><span class="headline hl4">by JOHANN WOLFGANG VON GOETHE</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <br />
+    </form>
+    </div>
+    </div>
+    </div>
+    <footer>
+
+    </footer>
+
+</body>
+
+</html>
