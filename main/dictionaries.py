@@ -827,5 +827,171 @@ def alabama():
 def california():
     dict = {
         "yes" : "yee",
+        
     }
     return dict
+
+def delaware():
+    dict = {
+        "cousin" : "cousint",
+    }
+    return dict
+
+def alaska():
+    pass
+
+def washington():
+    pass
+
+def oregon():
+    pass
+
+def arizona():
+    pass
+
+def nevada():
+    pass
+
+def hawaii():
+    pass
+
+def utah():
+    pass
+
+def newmexico():
+    pass
+
+def colorado():
+    pass
+
+def idaho():
+    pass
+
+def montana():
+    pass
+
+def wyoming():
+    pass
+
+def texas():
+    pass
+
+def oklahoma():
+    pass
+
+def nebraska():
+    pass
+
+def kansas():
+    pass
+
+def northdakota():
+    pass
+
+def southdakota():
+    pass
+
+def minnesota():
+    pass
+
+def wisconsin():
+    pass
+
+def iowa():
+    pass
+
+def missouri():
+    pass
+
+def arkansas():
+    pass
+
+def louisiana():
+    pass
+
+def illinois():
+    pass
+
+def michigan():
+    pass
+
+def indiana():
+    pass
+
+def mississippi():
+    pass
+
+def georgia():
+    pass
+
+def florida():
+    pass
+
+def southcarolina():
+    pass
+
+def northcarolina():
+    pass
+
+def viriginia():
+    pass
+
+def tennessee():
+    pass
+
+def kentucky():
+    pass
+
+def ohio():
+    pass
+
+def pennsylvania():
+    pass
+
+def maryland():
+    pass
+
+def newyork():
+    pass
+
+def newjersey():
+    pass
+
+def connecticut():
+    pass
+
+def rhodeisland():
+    pass
+
+def massachussetts():
+    pass
+
+def vermont():
+    pass
+
+def newhampshire():
+    dict = {
+        "water fountain" : "bubbler",
+        "porcupine" : "quill pig",
+        "catfish" : "hornpout",
+        "old car" : "beater",
+        "Massachussettsan" : "Masshole"
+    }
+    return dict
+
+def maine():
+    dict = {
+        "car" : "cah",
+        "lobster trap" : "pot",
+        "lobster" : "bug",
+        "knee" : "prayer handle",
+        "basement" : "down celler",
+        "to steal" : "to kife"
+    }
+    return dict
+
+def districtofcolumbia():
+    pass
+
+def westvirginia():
+    pass
