@@ -919,7 +919,14 @@ def indiana():
     pass
 
 def mississippi():
-    pass
+    dict = {
+        "soft drink" : "coke",
+        "shopping cart" : "buggy",
+        "cracker" : "nab",
+        "remoulade" : "comeback",
+        "going to" : "fixin to"
+    }
+    return dict
 
 def georgia():
     pass
