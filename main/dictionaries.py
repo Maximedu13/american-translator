@@ -883,7 +883,11 @@ def nebraska():
     pass
 
 def kansas():
-    pass
+    dict = {
+        "yum" : "treat",
+        "soft drink" : "pop"
+    }
+    return dict
 
 def northdakota():
     pass
@@ -961,7 +965,16 @@ def ohio():
     pass
 
 def pennsylvania():
-    pass
+    dict = {
+        "shopping cart" : "buggy",
+        "creek" : "crick",
+        "water" : "cooder",
+        "slippery" : "slippy",
+        "rubber band": "gum band",
+        "headscarf" : "babushka",
+        "soft-boiled egg" : "dippy egg"
+    }
+    return dict
 
 def maryland():
     pass
