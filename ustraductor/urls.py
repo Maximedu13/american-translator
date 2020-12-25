@@ -16,7 +16,10 @@ Including another URLconf
 from django.conf import settings
 from django.contrib import admin
 from django.urls import include, path
+from django.conf.urls import url
 from main import views
+
+app_name = 'ustraductor'
 
 urlpatterns = [
     path('', views.index, name='index'),
