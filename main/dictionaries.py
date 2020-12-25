@@ -917,7 +917,11 @@ def illinois():
     pass
 
 def michigan():
-    pass
+    dict = {
+        "soft drink" : "pop",
+        "tourist" : "fudgie",
+        "for" : "fir"
+    }
 
 def indiana():
     dict = {
