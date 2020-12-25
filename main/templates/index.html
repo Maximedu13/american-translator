@@ -25,7 +25,6 @@
             $('#us-state').on('change', function () {
                 var demonym = $('#us-state').find(":selected").text();
                 var first_letter = demonym.charAt(0).toLowerCase();
-                console.log(first_letter);
                 if ((vowel.includes(first_letter)) == true) {
                     $(".papers span span").html("an");
                 } else {
@@ -48,7 +47,6 @@
                         csrfmiddlewaretoken: '{{ csrf_token }}'
                     },
                     success: function (response) {
-                        console.log(input + selected + demonym);
                         $("#second-textarea").html(response);
                     },
                     error: function (error) {
