@@ -964,7 +964,15 @@ def rhodeisland():
     pass
 
 def massachussetts():
-    pass
+    dict = {
+        "remote control" : "clicker",
+        "garbage bin" : "barrel",
+        "basement" : "cellar",
+        "living room" : "parlor",
+        "liquor store" : "packie",
+        "dinner" : "supper",
+        "water fountain" : "bubbler"
+    }
 
 def vermont():
     pass
