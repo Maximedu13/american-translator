@@ -7,3 +7,18 @@
     font-family: 'Playfair Display', serif !important;
     font-size: 15pt !important;
 }
+
+
+@media only all and (max-width: 600px) {
+    .row{
+        flex-direction: column;
+    }
+
+    footer{
+        height: 100%;
+    }
+
+   
+
+
+}

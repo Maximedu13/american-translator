@@ -28,14 +28,11 @@ def index(request):
     """ index view """
     t = loader.get_template('index.html')
     forecast = weatherforecast()
-    print(british_to_american("aerogramme voila"))
     #the_news = news()
     if request.method == 'POST':
         user_input = request.POST.get('inputValue')
         us_state = request.POST.get('us-state').lower()
         demonym = request.POST.get('demonym').lower()
-        print(demonym)
-        print(user_input, " ", us_state)
         r = british_to_american(user_input)
         result = r
         result = treament(result, us_state)
