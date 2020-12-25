@@ -916,6 +916,14 @@ def michigan():
     pass
 
 def indiana():
+    dict = {
+        "difficult" : "failful",
+        "vacuum cleaner" : "sweeper",
+        "soft drink" : "pop",
+        "crayfish" : "crawdad",
+        "sneakers" : "tennis shoes",
+        "yard sale" : "rummage sale"
+    }
     pass
 
 def mississippi():
