@@ -892,22 +892,40 @@ def colorado():
     return dict
 
 def idaho():
-    pass
+    dict = {
+        "creek" : "crick",
+    }
+    return dict
 
 def montana():
-    pass
+    dict = {
+        "soft drink" : "pop",
+    }
+    return dict
 
 def wyoming():
-    pass
+    dict = {
+        "barbed wire" : "silk",
+    }
+    return dict
 
 def texas():
-    pass
+    dict = {
+        "boiled" : "bald",
+    }
+    return dict
 
 def oklahoma():
-    pass
+    dict = {
+        "refrigerator" : "ice box",
+    }
+    return dict
 
 def nebraska():
-    pass
+    dict = {
+        "meat pocket" : "runza",
+    }
+    return dict
 
 def kansas():
     dict = {
@@ -970,13 +988,22 @@ def missouri():
     return dict
 
 def arkansas():
-    pass
+    dict = {
+        "to tump" : "to flipp over",
+    }
+    return dict
 
 def louisiana():
-    pass
+    dict = {
+        "Santa Claus" : "Papa Noël",
+    }
+    return dict
 
 def illinois():
-    pass
+    dict = {
+        "bathroom" : "washroom",
+    }
+    return dict
 
 def michigan():
     dict = {
@@ -995,7 +1022,7 @@ def indiana():
         "sneakers" : "tennis shoes",
         "yard sale" : "rummage sale"
     }
-    pass
+    return dict
 
 def mississippi():
     dict = {
@@ -1024,22 +1051,40 @@ def florida():
     return dict
 
 def southcarolina():
-    pass
+    dict = {
+        "ice tea" : "sweet tea",
+    }
+    return dict
 
 def northcarolina():
-    pass
+    dict = {
+        "annoyed" : "momicked",
+    }
+    return dict
 
 def viriginia():
-    pass
+    dict = {
+        "funny" : "geek",
+    }
+    return dict
 
 def tennessee():
-    pass
+    dict = {
+        "shopping cart" : "buggy",
+    }
+    return dict
 
 def kentucky():
-    pass
+    dict = {
+        "shopping cart" : "buggy",
+    }
+    return dict
 
 def ohio():
-    pass
+    dict = {
+        "to wash" : "to warsh",
+    }
+    return dict
 
 def pennsylvania():
     dict = {
