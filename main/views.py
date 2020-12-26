@@ -7,11 +7,12 @@ import requests as req
 from main.dictionaries import *
 from main.location import location, weatherforecast
 from main.stockexchange import news
+from django.utils.html import escape
 
 # Create your views here.
 
 def treament(string, state):
-    state = eval(state + "()")
+    state = eval(state.replace(" ", "") + "()")
     for key, value in state.items():
         if key in string:
             string = string.replace(key, value)
@@ -30,7 +31,7 @@ def index(request):
     forecast = weatherforecast()
     #the_news = news()
     if request.method == 'POST':
-        user_input = request.POST.get('inputValue')
+        user_input = escape(request.POST.get('inputValue'))
         us_state = request.POST.get('us-state').lower()
         demonym = request.POST.get('demonym').lower()
         r = british_to_american(user_input)
