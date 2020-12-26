@@ -838,7 +838,10 @@ def delaware():
     return dict
 
 def alaska():
-    pass
+    dict = {
+        "snowmobile" : "snowmachine",
+    }
+    return dict
 
 def washington():
     pass
@@ -890,16 +893,35 @@ def kansas():
     return dict
 
 def northdakota():
-    pass
+    dict = {
+        "soft drink" : "pop",
+        "dinner" : "supper",
+        "parhelion" : "sundog"
+    }
+    return dict
 
 def southdakota():
-    pass
+    dict = {
+        "soft drink" : "pop",
+        "camper shell" : "truck topper"
+    }
+    return dict
 
 def minnesota():
-    pass
+    dict = {
+        "soft drink" : "pop",
+        "gross" : "ish",
+        "hockey pants" : "breezers"
+    }
+    return dict
 
 def wisconsin():
-    pass
+    dict = {
+        "stop light" : "stop-and-go light",
+        "water fountain" : "bubbler",
+        "beer" : "brewski"
+    }
+    return dict
 
 def iowa():
     dict = {
@@ -908,6 +930,7 @@ def iowa():
         "creek" : "crick",
         "soft drink" : "pop"
     }
+    return dict
 
 def missouri():
     dict = {
@@ -937,6 +960,7 @@ def michigan():
         "tourist" : "fudgie",
         "for" : "fir"
     }
+    return dict
 
 def indiana():
     dict = {
