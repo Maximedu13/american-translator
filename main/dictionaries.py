@@ -844,22 +844,40 @@ def alaska():
     return dict
 
 def washington():
-    pass
+    dict = {
+        "yard sale" : "jumble sale",
+    }
+    return dict
 
 def oregon():
-    pass
+    dict = {
+        "expensive" : "spendy",
+    }
+    return dict
 
 def arizona():
-    pass
+    dict = {
+        "air-con" : "swamp box",
+    }
+    return dict
 
 def nevada():
-    pass
+    dict = {
+        "soft drink" : "soda",
+    }
+    return dict
 
 def hawaii():
-    pass
+    dict = {
+        "woman" : "wahine",
+    }
+    return dict
 
 def utah():
-    pass
+    dict = {
+        "powder snow" : "powder",
+    }
+    return dict
 
 def newmexico():
     pass
@@ -1029,10 +1047,16 @@ def newjersey():
     pass
 
 def connecticut():
-    pass
+    dict = {
+        "liquor store" : "packie",
+    }
+    return dict
 
 def rhodeisland():
-    pass
+    dict = {
+        "water fountain" : "bubbler",
+    }
+    return dict
 
 def massachussetts():
     dict = {
@@ -1046,7 +1070,10 @@ def massachussetts():
     }
 
 def vermont():
-    pass
+    dict = {
+        "ice cream" : "creemee",
+    }
+    return dict
 
 def newhampshire():
     dict = {
@@ -1073,4 +1100,7 @@ def districtofcolumbia():
     pass
 
 def westvirginia():
-    pass
+    dict = {
+        "creek" : "crick",
+    }
+    return dict
