@@ -880,10 +880,16 @@ def utah():
     return dict
 
 def newmexico():
-    pass
+    dict = {
+        "soft drink" : "coke",
+    }
+    return dict
 
 def colorado():
-    pass
+    dict = {
+        "powder snow" : "pow",
+    }
+    return dict
 
 def idaho():
     pass
@@ -1002,10 +1008,20 @@ def mississippi():
     return dict
 
 def georgia():
-    pass
+    dict = {
+        "soft drink" : "coke",
+    }
+    return dict
 
 def florida():
-    pass
+    dict = {
+        "soft drink" : "coke",
+        "shopping cart" : "buggy",
+        "cracker" : "nab",
+        "remoulade" : "comeback",
+        "going to" : "fixin to"
+    }
+    return dict
 
 def southcarolina():
     pass
@@ -1038,13 +1054,25 @@ def pennsylvania():
     return dict
 
 def maryland():
-    pass
+    dict = {
+        "blue crab" : "jimmy",
+        "upset" : "salty",
+        "granita" : "snowball"
+    }
+    return dict
 
 def newyork():
-    pass
+    dict = {
+        "soft drink" : "soda",
+        "to buy" : "to cop"
+    }
+    return dict
 
 def newjersey():
-    pass
+    dict = {
+        "soft drink" : "soda"
+    }
+    return dict
 
 def connecticut():
     dict = {
