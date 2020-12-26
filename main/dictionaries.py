@@ -902,10 +902,25 @@ def wisconsin():
     pass
 
 def iowa():
-    pass
+    dict = {
+        "ground squirrel" : "squinny",
+        "to wash" : "to warsh",
+        "creek" : "crick",
+        "soft drink" : "pop"
+    }
 
 def missouri():
-    pass
+    dict = {
+        "to wash" : "to warsh",
+        "washing" : "warshing",
+        "wash" : "warsh",
+        "washes" : "warshes",
+        "grocery bag" : "sack",
+        "quarter" : "quartar",
+        "soft drink" : "soda",
+        "redneck" : "hoosier"
+    }
+    return dict
 
 def arkansas():
     pass
