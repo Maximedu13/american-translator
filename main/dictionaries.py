@@ -882,10 +882,25 @@ def washington():
     return dict_washington
 
 def oregon():
-    dict = {
+    """oregon dictionary"""
+    dict_oregon = {
+        "pricey" : "spendy",
         "expensive" : "spendy",
+        "beach" : "The Coast",
+        "coastline" : "The Coast",
+        "seaboard" : "The Coast",
+        "shore" : "The Coast",
+        "sunshine" : "sunbreak",
+        "sunlight" : "sunbreak",
+        "daylight" : "sunbreak",
+        "ice patch" : "black ice",
+        "clear ice" : "black ice",
+        "potato wedges" : "jojos",
+        "french fries" : "jojos",
+        "filthy" : "delicious",
+        "microserf" : "web developer"
     }
-    return dict
+    return dict_oregon
 
 def arizona():
     dict = {
