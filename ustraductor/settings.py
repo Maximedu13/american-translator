@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '*a*@179u)3)oohd#v!j7@)tv)r-*&ftzlj5fnk2sg6vq702=ql'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['https://whatsupguys.herokuapp.com/', '127.0.0.1']
 
