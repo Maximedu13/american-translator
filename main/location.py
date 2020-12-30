@@ -1,5 +1,6 @@
 import json
 import urllib.request
+import requests
 
 def location():
     """ get the user location """
@@ -12,6 +13,6 @@ def location():
 def weatherforecast():
     api_key = 'cdbebf7e6d1e1b360be28f616054d54d'
     country_code, city = location()
-    with urllib.request.urlopen("http://api.openweathermap.org/data/2.5/weather?q=" + city +',' + country_code + "&appid=" + api_key) as url:
-        data = json.loads(url.read().decode())
-    return data
+    r = requests.get("http://api.openweathermap.org/data/2.5/weather?q=" + city +',' + country_code + "&appid=" + api_key)
+    r = json.loads(r.text)
+    return r
