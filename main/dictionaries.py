@@ -838,10 +838,34 @@ def delaware():
     return dict
 
 def alaska():
-    dict = {
+    """ alaska dictionary""" 
+    dict_alaska = {
         "snowmobile" : "snowmachine",
+        "snowmobiles" : "snowmachines",
+        "killer whale" : "orca",
+        "killer whales" : "orcas",
+        "northern lights" : "aurora borealis",
+        "northern light" : "aurora borealis",
+        "musher" : "dogsled",
+        "Alaska": "The Greatland",
+        "good luck figurine" : "billiken",
+        "good luck figurines" : "billikens",
+        "tourist souvenir" : "oosik",
+        "end of winter " : "break-up",
+        "Anchorage Daily News" : "ADN",
+        "all-terrain vehicle" : "ATV", 
+        "white whales" : "belugas",
+        "white whale" : "beluga",
+        "insulated boots" : "bunny boots",
+        "insulated boot" : "bunny boot",
+        "food storage cabin" : "cache",
+        "snow tires" : "studded tires",
+        "winter tires" : "studded tires",
+        "snow tire" : "studded tire",
+        "winter tire" : "studded tire",
+        "frozen ground" : "permafrost",
     }
-    return dict
+    return dict_alaska
 
 def washington():
     dict = {
