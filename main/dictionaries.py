@@ -868,10 +868,18 @@ def alaska():
     return dict_alaska
 
 def washington():
-    dict = {
+    """ washington dictionary """
+    dict_washington = {
         "yard sale" : "jumble sale",
+        "yard sales" : "jumble sales",
+        "flannel shirt" : "Seattle tuxedo",
+        "garage sale" : "tag sale",
+        "garage sales" : "tag sales",
+        "moss" : "lawn",
+        "backyard pets" : "chicken",
+        "backyard pet" : "chicken",
     }
-    return dict
+    return dict_washington
 
 def oregon():
     dict = {
