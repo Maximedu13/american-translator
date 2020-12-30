@@ -903,10 +903,17 @@ def oregon():
     return dict_oregon
 
 def arizona():
-    dict = {
+    """arizona dictionary"""
+    dict_arizona = {
         "air-con" : "swamp box",
+        "air conditioner" : "swamp box",
+        "butcher shop" : "carneceria",
+        "Grand Canyon" : "Big Ditch",
+        "hotdog" : "Sonoran dog",
+        "dust storm" : "haboob",
+        "monsoon storm" : "chubasco"
     }
-    return dict
+    return dict_arizona
 
 def nevada():
     dict = {
