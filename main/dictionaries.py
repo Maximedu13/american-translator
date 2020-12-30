@@ -916,10 +916,14 @@ def arizona():
     return dict_arizona
 
 def nevada():
-    dict = {
+    """nevada dictionary"""
+    dict_nevada = {
         "soft drink" : "soda",
+        "frozen frog" : "pogonip",
+        "gambling addict" : "slot zombie",
+        "compulsive gambler" : "pigeon"
     }
-    return dict
+    return dict_nevada
 
 def hawaii():
     dict = {
