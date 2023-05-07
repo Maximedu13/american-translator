@@ -1,1 +1,1 @@
-web: gunicorn ustraductor.wsgi
+gunicorn ustraductor.wsgi
