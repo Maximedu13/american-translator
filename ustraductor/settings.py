@@ -25,7 +25,7 @@ SECRET_KEY = '*a*@179u)3)oohd#v!j7@)tv)r-*&ftzlj5fnk2sg6vq702=ql'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://americantranslator.glitch.me/', '127.0.0.1:8000']
+ALLOWED_HOSTS = ['https://americantranslator.glitch.me/', '127.0.0.1']
 
 
 # Application definition
