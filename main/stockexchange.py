@@ -7,7 +7,7 @@ from newsapi import NewsApiClient
 state_names = ["Alaska", "Alabama", "Arkansas", "American Samoa", "Arizona", "California", "Colorado", "Connecticut", "District ", "of Columbia", "Delaware", "Florida", "Georgia", "Guam", "Hawaii", "Iowa", "Idaho", "Illinois", "Indiana", "Kansas", "Kentucky", "Louisiana", "Massachusetts", "Maryland", "Maine", "Michigan", "Minnesota", "Missouri", "Mississippi", "Montana", "North Carolina", "North Dakota", "Nebraska", "New Hampshire", "New Jersey", "New Mexico", "Nevada", "New York", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Puerto Rico", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Virginia", "Virgin Islands", "Vermont", "Washington", "Wisconsin", "West Virginia", "Wyoming"]
 
 def news():
-    newsapi = NewsApiClient(api_key='395a44b33aa14aceb05cc2d718c8331b')
+    newsapi = NewsApiClienwt(api_key='395a44b33aa14aceb05cc2d718c8331b')
     gnewskey = "0c2bf6ccd5e99220130263aade4b6542"
     # /v2/top-headlines
     random_states = random.sample(state_names, 5)
